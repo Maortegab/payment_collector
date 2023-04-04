@@ -18,7 +18,8 @@ public class LoginPage extends BasePage {
 	private By btnIniciarSesion=By.xpath("//*[@id=\"okta-signin-submit\"]");
 	private By btonpush=By.xpath("//*[@id=\"form75\"]/div[2]/input");
 
-	By logoAvianca=By.xpath("//app-header-home/div[1]/div[1]/div[1]/div[1]/img[1]");
+	private By logoAvianca = By.xpath("(//p[@class='imglogin session-name'])[1]");
+	private String logo = "(//p[@class='imglogin session-name'])[1]";
 	/*public LoginPage() {
 		 navigateToUrl("https://azwapppaycollfrontusedev.az-asev3-use-dev-pci.appserviceenvironment.net/Login");
 	}*/
@@ -49,7 +50,7 @@ public class LoginPage extends BasePage {
 		click(btnIniciarSesion);
 		isDisplayed(btonpush);
 		click(btonpush);
-		espera("//p[contains(text(),'“Natalia bienvenid@ a esta nueva experiencia”')]");
+		espera(logo);
 		
 	}
 

@@ -31,6 +31,8 @@ public class BasePage {
 		return titulo;
 	}
     
+    
+    
     protected void espera(String xpath) {
     	WebDriverWait wait = new WebDriverWait(driver, 20);
     	WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
@@ -53,6 +55,7 @@ public class BasePage {
     		Thread.sleep(tiempo*1000);
     	}while(driver.findElement(locator).isDisplayed() == false);
     }
+    
     protected void isDisplayedReserva(By locator) throws InterruptedException {
     	do {
     		Thread.sleep(6*1000);

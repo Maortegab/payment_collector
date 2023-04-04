@@ -7,11 +7,11 @@ import org.openqa.selenium.WebElement;
 public class HomePage extends BasePage{
 	
 	//By inputReserva= By.xpath("//input[@id='inputReserve']");
-	By inputReserva= By.xpath("//*[@id=\"inputReserve\"]");
-	By buttonGestionar=By.xpath("//button[@id='btnReserve']");
+	By inputReserva= By.xpath("(//input[@id='inputReserve'])[1]");
+	By buttonGestionar=By.xpath("(//img[@class='img-search'])[1]");
 	By alerta= By.xpath("/html/body/div/div");
-	By textoAlerta= By.xpath("//*[@id=\"swal2-html-container\"]/p");
-	By logoAvianca=By.xpath("//app-header-home/div[1]/div[1]/div[1]/div[1]/img[1]");
+	By textoAlerta= By.xpath("(//p[@class='text-content'])[1]");
+	private By logoAvianca = By.xpath("(//p[@class='imglogin session-name'])[1]");
 	
 	//SELECTORES PARA EL HOME 
 	By descripcionPrincipal=By.xpath("/html/body/app-root/app-home-layout/div/div/div/div[2]/app-home/div/div/div[2]/p");

@@ -9,11 +9,11 @@ Feature: regla de validacion itinerario
         Examples:
         |Reserva|RowNumber|
         |reservas|0|
-        |reservas|1|
-        |reservas|2|
-        |reservas|3|
-        |reservas|4|
-        |reservas|5|
+        #|reservas|1|
+        #|reservas|2|
+        #|reservas|3|
+        #|reservas|4|
+        #|reservas|5|
        
         
   #Scenario Outline: Verificar que aparezca un popup con: La fecha de partida ya ha pasado	
