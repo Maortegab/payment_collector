@@ -31,16 +31,13 @@ public class ReglaItinerarioSteps {
     private DetailsPage detailsPage;
     private ConfigFileReader properties;
   
-//	String correo="";
-//	String contrasena="";
+
 	
 	@Given("Logueo")
 	public void logueo() throws InterruptedException {
 		properties = new ConfigFileReader();
-//		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mortegabuitr\\eclipse-workspace\\payment_collector\\src\\test\\resources\\chromeDriver\\chromeDriver.exe");
 		System.setProperty(properties.getConfigkey(),properties.getConfig_value() );
 		driver = new ChromeDriver();
-//		driver.get("https://azwapppaycollfrontusedev.az-asev3-use-dev-pci.appserviceenvironment.net/login");
 		driver.get(properties.getApplicationUrl());
 		driver.manage().window().maximize();
 		loginPage = new LoginPage(driver);
@@ -64,26 +61,20 @@ public class ReglaItinerarioSteps {
 	public void escribe_un_de_reserva_de_la_row_tipo_moneda(String string, Integer rowNumber) throws InvalidFormatException, IOException, InterruptedException {
 		ExcelReader reader = new ExcelReader();
 		List<Map<String,String>> testData = 
-				reader.getData("C:\\Users\\npaezbuitrag\\eclipse-workspace\\payment_collector\\src\\test\\resources\\configs\\automation.xlsx", string);
-		String reserva = testData.get(rowNumber).get("Reserva");
-		Allure.description("Reserva: "+reserva);
-		homePage.setReserva(reserva);
-	}
-	//----APIS/TSA
-	@When("Escribe la {string} de la row <Rownumber> APIS-TSA")
-	public void escribe_la_de_la_row_rownumber_apis_tsa(String string, Integer rowNumber) throws InvalidFormatException, IOException, InterruptedException {
-		ExcelReader reader = new ExcelReader();
-		List<Map<String,String>> testData = 
 				reader.getData("src/test/resources/configs/automation.xlsx", string);
 		String reserva = testData.get(rowNumber).get("Reserva");
 		Allure.description("Reserva: "+reserva);
 		homePage.setReserva(reserva);
 	}
 	//----APIS/TSA
-	@Then("Validar que el texto de salida es {string}")
-	public void validar_que_el_texto_de_salida_es(String textoEsperado) throws InterruptedException {
-		String textoObtenido=homePage.validarPopup();
-		Assert.assertEquals(textoObtenido, textoEsperado);
+	@When("Escribe la {string} de la row {int} APIS-TSA")
+	public void escribe_la_de_la_row_apis_tsa(String string, Integer rowNumber) throws InvalidFormatException, IOException, InterruptedException {
+		ExcelReader reader = new ExcelReader();
+		List<Map<String,String>> testData = 
+				reader.getData("src/test/resources/configs/automation.xlsx", string);
+		String reserva = testData.get(rowNumber).get("Reserva");
+		Allure.description("Reserva: "+reserva);
+		homePage.setReserva(reserva);
 	}
 
 	@When("Dar click en gestionar")

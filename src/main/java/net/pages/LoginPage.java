@@ -20,9 +20,25 @@ public class LoginPage extends BasePage {
 
 	private By logoAvianca = By.xpath("(//p[@class='imglogin session-name'])[1]");
 	private String logo = "(//p[@class='imglogin session-name'])[1]";
-	/*public LoginPage() {
-		 navigateToUrl("https://azwapppaycollfrontusedev.az-asev3-use-dev-pci.appserviceenvironment.net/Login");
-	}*/
+	
+	// Campos avianca
+	private By botonIniciarSesion = By.xpath("//a[normalize-space()='Iniciar sesión']");
+	private By inputAmadeus = By.xpath("(//input[@type='text'])[1]");
+	private By nombreAsesor = By.xpath("(//p[@class='imglogin session-name'])[1]");
+
+	// Campos Office 365
+	private By inputCorreoMcsft = By.id("i0116");
+	private By btnSiguienteUsuario = By.xpath("(//input[@id='idSIButton9'])[1]");	
+	
+
+	// camposOcta
+	public By inputCorreoOkta = By.xpath("//input[@id='okta-signin-username']");
+	public By inputPasswordoOkta = By.xpath("//input[@id='okta-signin-password']");
+	private By btnSingInOcta = By.xpath("(//input[@id='okta-signin-submit'])[1]");
+	public By btnsendPush = By.xpath("//*[@id='form75']/div[2]/input");
+	public By btnBackToSingInOcta = By.xpath("//a[normalize-space()='Back to sign in']");
+		
+	
     public LoginPage(WebDriver driver) {
         super(driver);
     }
@@ -51,7 +67,45 @@ public class LoginPage extends BasePage {
 		isDisplayed(btonpush);
 		click(btonpush);
 		espera(logo);
-		
+	}
+	
+	public void ingresarUsuarioOkta(String usuario) throws InterruptedException {
+		isDisplayed(inputCorreoOkta);
+		type(inputCorreoOkta, usuario);		
+	}
+	
+	public void ingresarContrasenaOkta(String password) throws InterruptedException {		
+		type(inputPasswordoOkta, password);
+	}
+	
+	public void clickConectOcta() throws InterruptedException {		
+		click(btnSingInOcta);
 	}
 
+	public void sendPushOkta() throws InterruptedException {
+		isDisplayed(btnsendPush);
+		click(btnsendPush);
+		espera(logo);
+	}
+
+	public By getLogoAvianca() {
+		return logoAvianca;
+	}
+
+	public void validarNombreAsesorVisible() throws InterruptedException {
+		isDisplayed(getNombreAsesor());		
+	}
+
+	public By getNombreAsesor() {
+		return nombreAsesor;
+	}
+	
+	public void UsuarioOktaVisible() throws InterruptedException {
+		isDisplayed(inputCorreoOkta);		
+	}
+	
+	public void ContraseñaOktaVisible() throws InterruptedException {
+		isDisplayed(inputPasswordoOkta);		
+	}
+	
 }
