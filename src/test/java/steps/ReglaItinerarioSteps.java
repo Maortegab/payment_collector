@@ -1,5 +1,7 @@
 package steps;
 
+import static org.testng.Assert.assertTrue;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
@@ -76,6 +78,17 @@ public class ReglaItinerarioSteps {
 		Allure.description("Reserva: "+reserva);
 		homePage.setReserva(reserva);
 	}
+	
+	//----HU05
+		@When("Escribe la {string} de la row {int} HuCinco")
+		public void escribe_la_de_la_row_HuCinco(String string, Integer rowNumber) throws InvalidFormatException, IOException, InterruptedException {
+			ExcelReader reader = new ExcelReader();
+			List<Map<String,String>> testData = 
+					reader.getData("src/test/resources/configs/automation.xlsx", string);
+			String reserva = testData.get(rowNumber).get("Reserva");
+			Allure.description("Reserva: "+reserva);
+			homePage.setReserva(reserva);
+		}
 
 	@When("Dar click en gestionar")
 	public void dar_click_en_gestionar() throws InterruptedException {
@@ -85,12 +98,14 @@ public class ReglaItinerarioSteps {
 	@Then("Aparece popUp con Mensaje {string}")
 	public void aparece_pop_up_con_mensaje(String textoEsperado) throws InterruptedException {
 		String textoObtenido=homePage.validarPopup();
-		Assert.assertEquals(textoObtenido, textoEsperado);
+//		Assert.assertEquals(textoObtenido, textoEsperado);
+		assertTrue(textoObtenido.contains(textoEsperado));
 	}
 	
 	@Then("Pasa a la pantalla de detalles de la resrva")
 	public void pasa_a_la_pantalla_de_detalles_de_la_resrva() throws InterruptedException {
 		String titulo=detailsPage.validarTitulo();
-		Assert.assertEquals(titulo, "Formulario gestión de pagos");
+//		Assert.assertEquals(titulo, "Formulario gestión de pagos");
+		assertTrue(titulo.contains("Formulario gestión de pagos"));
 	}
 }

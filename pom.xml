@@ -96,7 +96,12 @@
 			<artifactId>webdrivermanager</artifactId>
 			<version>4.2.2</version>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>automation</groupId>
+			<artifactId>CucumberTest</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
     </dependencies>
     
 </project>

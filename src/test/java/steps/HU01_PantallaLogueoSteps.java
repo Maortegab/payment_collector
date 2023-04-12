@@ -36,39 +36,31 @@ public class HU01_PantallaLogueoSteps {
 		homePage =new HomePage(driver);
 		detailsPage =new DetailsPage(driver);
 		loginPage.autenticacionMicrosoft(properties.getMail());
-		
-//		login.loginMicrosoft();		
+	
 	}
 
 	@When("ingresar usuario")
 	public void ingresar_usuario() throws InterruptedException {
 		loginPage.ingresarUsuarioOkta(properties.getMail());
-//		login.ingresarUsuarioOkta();
 	}
 
 	@When("ingresar contraseña")
 	public void ingresar_contrasena() throws InterruptedException {
 	    loginPage.ingresarContrasenaOkta(properties.getPassword());
-//		login.ingresarContraseñaOkta();
 	}
 
 	@When("dar click en boton conectar")
 	public void dar_click_en_boton_conectar() throws InterruptedException {
 	    loginPage.clickConectOcta();
-//		login.clickConectarOcta();
 	}
 
 	@Then("validar conexión exitosa")
 	public void validar_conexión_exitosa() throws InterruptedException {
 		loginPage.sendPushOkta();
 		assertTrue(driver.findElement(loginPage.getLogoAvianca()).isDisplayed());
-		driver.close();
-//	    login.sendPushOkta();
-//		login.verificarLogoAvianca();
-//		login.escribirAmadeus();
-//		login.cerrarNavegador();
-		
+		driver.close();		
 	}
+	
 	//ScenarioAlmErroresConexB2B
 	@Given("La conexión Erronea con B2B")
 	public void la_conexión_erronea_con_b2b() {		
@@ -97,15 +89,11 @@ public class HU01_PantallaLogueoSteps {
 		loginPage.autenticacionMicrosoft(properties.getMail());
 		loginPage.autenticacionOkta(properties.getMail(), properties.getPassword());
 		assertTrue(driver.findElement(loginPage.getLogoAvianca()).isDisplayed());
-//	    login.autenticacion();
-//	    login.verificarLogoAvianca();
 	}
 
 	@When("aparece la información del asesor")
 	public void aparece_la_información_del_asesor() throws InterruptedException {
 		loginPage.validarNombreAsesorVisible();
-		
-//	    login.validarCampoVisibleNombreAsesor();
 	}
 
 	@Then("Validar que la información es correcta")
@@ -114,29 +102,23 @@ public class HU01_PantallaLogueoSteps {
 		String nombre = driver.findElement(loginPage.getNombreAsesor()).getText();
 		boolean validacionNombreAsesor = driver.findElement(loginPage.getNombreAsesor()).getText().equals(nombre);
 		assertTrue(validacionNombreAsesor);
-		driver.close();
-//	    login.validarNombreAsesor();
-	    
+		driver.close();	    
 	}
 	
 //	# PBI_383190 Validación Tiempo Activo de Sesión
 //	#ScenarioValidarTiempoActivo
 	@Given("inicio de sesión exitoso")
 	public void inicio_de_sesión_exitoso() throws InterruptedException {
-//		login.autenticacion();
-//	    login.verificarLogoAvianca();
 		throw new io.cucumber.java.PendingException();
 	}
 
 	@When("pasados {int} minutos")
 	public void pasados_minutos(Integer int1) {
-	    // Write code here that turns the phrase above into concrete actions
 	    throw new io.cucumber.java.PendingException();
 	}
 
 	@Then("Validar que la sesión deja de estar activa")
 	public void validar_que_la_sesión_deja_de_estar_activa() {
-	    // Write code here that turns the phrase above into concrete actions
 	    throw new io.cucumber.java.PendingException();
 	}
 	
@@ -148,13 +130,11 @@ public class HU01_PantallaLogueoSteps {
 		driver.get(properties.getApplicationUrl());
 		driver.manage().window().maximize();
 		loginPage.autenticacionMicrosoft(properties.getMail());
-//		login.loginMicrosoft();
 	}
 
 	@When("solicita el usuario")
 	public void solicita_el_usuario() throws InterruptedException {
 	    loginPage.UsuarioOktaVisible();
-//		login.UsuarioOktaVisible();	    
 	}
 
 	@Then("Validar que se ingresa correctamente")
@@ -164,16 +144,9 @@ public class HU01_PantallaLogueoSteps {
 		loginPage.clickConectOcta();
 		loginPage.sendPushOkta();
 		assertTrue(driver.findElement(loginPage.getLogoAvianca()).isDisplayed());
-		driver.close();
-//	    login.ingresarUsuarioOkta();
-//		login.ingresarContraseñaOkta();
-//	    login.clickConectarOcta();
-//	    login.sendPushOkta();
-//	    login.verificarLogoAvianca();
-//	    login.cerrarNavegador();
-	    
-	    
+		driver.close();   
 	}
+	
 //	#ScenarioValidarContraseñaPaymentC
 	@Given("La pantalla de inicio de sesión contraseña")
 	public void la_pantalla_de_inicio_de_sesión_contraseña() throws InterruptedException, IOException {
@@ -182,16 +155,12 @@ public class HU01_PantallaLogueoSteps {
 		driver.manage().window().maximize();
 		loginPage.autenticacionMicrosoft(properties.getMail());
 		loginPage.ingresarUsuarioOkta(properties.getMail());
-//		login.loginMicrosoft();
-//		login.ingresarUsuarioOkta();
 	}
 
 	@When("solicita la contraseña")
 	public void solicita_la_contraseña() throws InterruptedException {
 	    loginPage.ContraseñaOktaVisible();
 	    loginPage.ingresarContrasenaOkta(properties.getPassword());
-//		login.ContraseñaOktaVisible();
-//	    login.ingresarContraseñaOkta();
 	}
 
 	@Then("Validar que se realiza el ingreso correctamente")
@@ -199,12 +168,7 @@ public class HU01_PantallaLogueoSteps {
 	    loginPage.clickConectOcta();
 	    loginPage.sendPushOkta();
 	    assertTrue(driver.findElement(loginPage.getLogoAvianca()).isDisplayed());
-	    driver.close();
-//		login.clickConectarOcta();	    
-//	    login.sendPushOkta();
-//	    login.verificarLogoAvianca();
-//	    login.cerrarNavegador();
-	    
+	    driver.close();	    
 	}
 
 //	#ScenarioValidarEstadoBloqueadoPaymentC
