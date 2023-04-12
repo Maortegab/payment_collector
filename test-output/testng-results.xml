@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="7" passed="4" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-05T10:01:10 COT" name="Default suite" finished-at="2023-04-05T10:03:30 COT" duration-ms="140137">
+  <suite started-at="2023-04-12T08:38:42 COT" name="Default suite" finished-at="2023-04-12T08:47:00 COT" duration-ms="497972">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunCukesTest@5505ae1a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-04-05T10:01:10 COT" name="Default test" finished-at="2023-04-05T10:03:30 COT" duration-ms="140137">
+    <test started-at="2023-04-12T08:38:42 COT" name="Default test" finished-at="2023-04-12T08:47:00 COT" duration-ms="497972">
       <class name="runner.RunCukesTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.RunCukesTest@5505ae1a]" started-at="2023-04-05T10:01:10 COT" name="setUpClass" finished-at="2023-04-05T10:01:10 COT" duration-ms="286" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.RunCukesTest@5505ae1a]" started-at="2023-04-12T08:38:42 COT" name="setUpClass" finished-at="2023-04-12T08:38:42 COT" duration-ms="273" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7ddcb0dc]]>
+                <![CDATA[org.testng.TestRunner@3387ab0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunCukesTest@5505ae1a]" started-at="2023-04-05T10:01:10 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-05T10:02:24 COT" duration-ms="73252" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunCukesTest@5505ae1a]" started-at="2023-04-12T08:38:42 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-12T08:40:01 COT" duration-ms="78772" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Ingresar la reserva para error: Por favor ingrese el APIS/TSA en la reserva"]]>
+                <![CDATA["Ingresar la reserva para error: Por favor ingresa el APIS/TSA en la reserva"]]>
               </value>
             </param>
             <param index="1">
@@ -36,29 +36,29 @@
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Por favor ingrese el APIS/TSA en la reserva] but found [La reserva no tiene cupo confirmado]]]>
+              <![CDATA[expected [Por favor ingresa el APIS/TSA en la reserva] but found [Valida el OID de la cotización y vuelve a intentarlo]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Por favor ingrese el APIS/TSA en la reserva] but found [La reserva no tiene cupo confirmado]
+              <![CDATA[java.lang.AssertionError: expected [Por favor ingresa el APIS/TSA en la reserva] but found [Valida el OID de la cotización y vuelve a intentarlo]
 at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1577)
 at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 at org.testng.Assert.assertEquals(Assert.java:131)
 at org.testng.Assert.assertEquals(Assert.java:655)
 at org.testng.Assert.assertEquals(Assert.java:665)
-at steps.ReglaItinerarioSteps.aparece_pop_up_con_mensaje(ReglaItinerarioSteps.java:94)
-at ✽.Aparece popUp con Mensaje "Por favor ingrese el APIS/TSA en la reserva"(file:///C:/Users/mortegabuitr/eclipse-workspace/payment_collector/src/test/resources/features/reglasValidacion/HU06_APIS_TSA.feature:12)
+at steps.ReglaItinerarioSteps.aparece_pop_up_con_mensaje(ReglaItinerarioSteps.java:88)
+at ✽.Aparece popUp con Mensaje "Por favor ingresa el APIS/TSA en la reserva"(file:///C:/Users/mortegabuitr/eclipse-workspace/payment_collector/src/test/resources/features/reglasValidacion/HU06_APIS_TSA.feature:12)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunCukesTest@5505ae1a]" started-at="2023-04-05T10:02:24 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-05T10:03:30 COT" duration-ms="66450" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunCukesTest@5505ae1a]" started-at="2023-04-12T08:40:01 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-12T08:41:19 COT" duration-ms="77547" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Ingresar la reserva para error: Por favor ingrese el APIS/TSA en la reserva"]]>
+                <![CDATA["Ingresar la reserva para error: Por favor ingresa el APIS/TSA en la reserva"]]>
               </value>
             </param>
             <param index="1">
@@ -69,25 +69,122 @@ at ✽.Aparece popUp con Mensaje "Por favor ingrese el APIS/TSA en la reserva"(f
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Por favor ingrese el APIS/TSA en la reserva] but found [La reserva no tiene cupo confirmado]]]>
+              <![CDATA[expected [Por favor ingresa el APIS/TSA en la reserva] but found [Valida el OID de la cotización y vuelve a intentarlo]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Por favor ingrese el APIS/TSA en la reserva] but found [La reserva no tiene cupo confirmado]
+              <![CDATA[java.lang.AssertionError: expected [Por favor ingresa el APIS/TSA en la reserva] but found [Valida el OID de la cotización y vuelve a intentarlo]
 at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1577)
 at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 at org.testng.Assert.assertEquals(Assert.java:131)
 at org.testng.Assert.assertEquals(Assert.java:655)
 at org.testng.Assert.assertEquals(Assert.java:665)
-at steps.ReglaItinerarioSteps.aparece_pop_up_con_mensaje(ReglaItinerarioSteps.java:94)
-at ✽.Aparece popUp con Mensaje "Por favor ingrese el APIS/TSA en la reserva"(file:///C:/Users/mortegabuitr/eclipse-workspace/payment_collector/src/test/resources/features/reglasValidacion/HU06_APIS_TSA.feature:12)
+at steps.ReglaItinerarioSteps.aparece_pop_up_con_mensaje(ReglaItinerarioSteps.java:88)
+at ✽.Aparece popUp con Mensaje "Por favor ingresa el APIS/TSA en la reserva"(file:///C:/Users/mortegabuitr/eclipse-workspace/payment_collector/src/test/resources/features/reglasValidacion/HU06_APIS_TSA.feature:12)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.RunCukesTest@5505ae1a]" started-at="2023-04-05T10:03:30 COT" name="tearDownClass" finished-at="2023-04-05T10:03:30 COT" duration-ms="12" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunCukesTest@5505ae1a]" started-at="2023-04-12T08:41:19 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-12T08:42:27 COT" duration-ms="68706" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Ingresar la reserva para error: Por favor ingresa el APIS/TSA en la reserva"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["HU 06 regla de validación No 6"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Por favor ingresa el APIS/TSA en la reserva] but found [Valida el OID de la cotización y vuelve a intentarlo]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Por favor ingresa el APIS/TSA en la reserva] but found [Valida el OID de la cotización y vuelve a intentarlo]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at steps.ReglaItinerarioSteps.aparece_pop_up_con_mensaje(ReglaItinerarioSteps.java:88)
+at ✽.Aparece popUp con Mensaje "Por favor ingresa el APIS/TSA en la reserva"(file:///C:/Users/mortegabuitr/eclipse-workspace/payment_collector/src/test/resources/features/reglasValidacion/HU06_APIS_TSA.feature:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunCukesTest@5505ae1a]" started-at="2023-04-12T08:42:27 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-12T08:43:35 COT" duration-ms="67652" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Ingresar la reserva para error: Por favor ingresa el APIS/TSA en la reserva"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["HU 06 regla de validación No 6"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunCukesTest@5505ae1a]" started-at="2023-04-12T08:43:35 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-12T08:44:43 COT" duration-ms="67621" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Ingresar la reserva para error: Por favor ingresa el APIS/TSA en la reserva"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["HU 06 regla de validación No 6"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunCukesTest@5505ae1a]" started-at="2023-04-12T08:44:43 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-12T08:45:52 COT" duration-ms="69705" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Ingresar la reserva para error: Por favor ingresa el APIS/TSA en la reserva"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["HU 06 regla de validación No 6"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunCukesTest@5505ae1a]" started-at="2023-04-12T08:45:52 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-12T08:47:00 COT" duration-ms="67515" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Ingresar la reserva para error: Por favor ingresa el APIS/TSA en la reserva"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["HU 06 regla de validación No 6"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.RunCukesTest@5505ae1a]" started-at="2023-04-12T08:47:00 COT" name="tearDownClass" finished-at="2023-04-12T08:47:00 COT" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

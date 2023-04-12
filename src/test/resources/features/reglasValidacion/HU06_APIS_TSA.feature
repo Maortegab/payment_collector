@@ -6,25 +6,31 @@ Feature: HU 06 regla de validación No 6
 	Background:
     Given Logueo
     
-  Scenario Outline: Ingresar la reserva para error: Por favor ingrese el APIS/TSA en la reserva
+  Scenario Outline: Ingresar la reserva para error: Por favor ingresa el APIS/TSA en la reserva
     When Escribe la "<Reserva>" de la row <RowNumber> APIS-TSA
     And Dar click en gestionar
-    Then Aparece popUp con Mensaje "Por favor ingrese el APIS/TSA en la reserva"
+    Then Aparece popUp con Mensaje "Por favor ingresa el APIS/TSA en la reserva"
     
   Examples:
     |Reserva|RowNumber|
-    |reservas|0|
-    #|reservas|1|
-    #| reservas | 2			 	 |
-    #
-  Scenario Outline: Ingresar la reserva para error: asociacion de segmentos APIS TSA
-    Given Escribe la "<Reserva>" de la row <Rownumber> APIS-TSA
-    When Dar click en gestionar
-    Then Validar que el texto de salida es "Por favor verifica la asociación de segmentos del APIS/TSA"
+    |reservas_HU06|0|
+    |reservas_HU06|1|
+    |reservas_HU06|2|
+    |reservas_HU06|3|
+    |reservas_HU06|4|
+    |reservas_HU06|5|
+    |reservas_HU06|6|
     
-  Examples:
-    | Reserva  | RowNumber |
-    | reservas | 0 				 |
+    
+    
+  #Scenario Outline: Ingresar la reserva para error: asociacion de segmentos APIS TSA
+    #Given Escribe la "<Reserva>" de la row <Rownumber> APIS-TSA
+    #When Dar click en gestionar
+    #Then Validar que el texto de salida es "Por favor verifica la asociación de segmentos del APIS/TSA"
+    #
+  #Examples:
+    #| Reserva  | RowNumber |
+    #| reservas | 0 				 |
     #| reservas | 1				 |
     #| reservas | 2			 	 |
     #
